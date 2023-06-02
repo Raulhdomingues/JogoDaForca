@@ -19,9 +19,17 @@ document.addEventListener("keydown", (evento) => {
             }
         }
 
-        // letra faz parte ou nao da palavra
+        // atualizarJogo();
     }
 })
+
+function mostrarAvisoLetraRepetida () {
+    const aviso = document.querySelector(".aviso-palavra-repetida");
+    aviso.classList.add("show");
+    setTimeout(() => {
+        aviso.classList.remove("show");
+    }, 1000);
+}
 
 function isLetra(codigo) {
     return codigo >= 65 && codigo <= 90;
